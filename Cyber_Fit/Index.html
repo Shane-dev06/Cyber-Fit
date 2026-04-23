@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER-FIT | Neural Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glowing overlay lines (cyberpunk grid) -->
+    <div class="grid-overlay"></div>
+    <div class="scanline"></div>
+
+    <header class="neon-border">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <h1 class="logo">CYBER-FIT</h1>
+        </div>
+        <div id="dash">
+            <ul>
+                <li class="nav-item"><a href="#">[DASHBOARD]</a></li>
+                <li class="nav-item"><a href="#">[TRACKER]</a></li>
+                <li class="nav-item"><a href="#">[PROFILE]</a></li>
+                <li class="nav-item"><a href="#">[AI]</a></li>
+            </ul>
+        </div>
+        <div class="theme-switcher">
+            <button class="theme-btn" data-theme="base">BASE</button>
+            <button class="theme-btn" data-theme="light">LIGHT</button>
+            <button class="theme-btn" data-theme="cyber">CYBER</button>
+            <button class="theme-btn" data-theme="neon">NEON</button>
+            <button class="theme-btn" data-theme="dark">DARK</button>
+        </div>
+        <div class="header-corner"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section with corner brackets -->
+        <section id="hero" class="futuristic-card">
+            <div class="corner-tl">┌</div>
+            <div class="corner-tr">┐</div>
+            <div class="corner-bl">└</div>
+            <div class="corner-br">┘</div>
+            
+            <div class="client">
+                <span class="tag">OPERATOR ID</span>
+                <span class="client-name">Runner_V</span>
+            </div>
+            <div class="level">
+                <span class="tag">STREET CRED</span>
+                <span class="level-value">LEVEL 3 — EDGE RUNNER</span>
+            </div>
+            <div class="xp-container">
+                <div class="xp-label">
+                    <span>XP PROGRESS</span>
+                    <span id="xp-text">450 / 1000</span>
+                </div>
+                <div id="xp">
+                    <div class="xp-fill" style="width: 45%;"></div>
+                </div>
+            </div>
+            <div id="rankprog">
+                <span class="tag">NEXT RANK</span>
+                <span>STREET SAMURAI (550 XP NEEDED)</span>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="stats">
+            <!-- Workout Card -->
+            <div class="stat-card" id="workout">
+                <div class="corner-tl">┌</div>
+                <div class="corner-tr">┐</div>
+                <div class="corner-bl">└</div>
+                <div class="corner-br">┘</div>
+                <div class="card-header">
+                    <div class="status-led"></div>
+                    <h3>▶ COMBAT CALIBRATION</h3>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-row">
+                        <span class="stat-label">TODAY'S WORKOUT</span>
+                        <span class="stat-value work">0 logged</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">XP GAINED</span>
+                        <span class="stat-value xpg">0</span>
+                    </div>
+                    <div class="quickadd">
+                        <button class="cyber-button small">+ QUICK ADD</button>
+                    </div>
+                </div>
+                <div class="card-footer-line"></div>
+            </div>
+
+            <!-- Meals Card -->
+            <div class="stat-card" id="meals">
+                <div class="corner-tl">┌</div>
+                <div class="corner-tr">┐</div>
+                <div class="corner-bl">└</div>
+                <div class="corner-br">┘</div>
+                <div class="card-header">
+                    <div class="status-led"></div>
+                    <h3>▶ SYNTH-FUEL LOG</h3>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-row">
+                        <span class="stat-label">MEALS TODAY</span>
+                        <span class="stat-value logm">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">CALORIES</span>
+                        <span class="stat-value cal">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">NUTRITION XP</span>
+                        <span class="stat-value xpn">0</span>
+                    </div>
+                </div>
+                <div class="card-footer-line"></div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="stat-card" id="album">
+                <div class="corner-tl">┌</div>
+                <div class="corner-tr">┐</div>
+                <div class="corner-bl">└</div>
+                <div class="corner-br">┘</div>
+                <div class="card-header">
+                    <div class="status-led"></div>
+                    <h3>▶ OPERATOR PROFILE</h3>
+                </div>
+                <div class="stat-content">
+                    <div class="avatar-frame">
+                        <div class="avatar-placeholder">[AVATAR]</div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">CYBERWARE</span>
+                        <span class="stat-value custmchar">Neural Interface v2.4</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">UNLOCKS</span>
+                        <span class="stat-value achieve">First Login [+100 XP]</span>
+                    </div>
+                </div>
+                <div class="card-footer-line"></div>
+            </div>
+
+            <!-- AI Card -->
+            <div class="stat-card" id="ai">
+                <div class="corner-tl">┌</div>
+                <div class="corner-tr">┐</div>
+                <div class="corner-bl">└</div>
+                <div class="corner-br">┘</div>
+                <div class="card-header">
+                    <div class="status-led pulse"></div>
+                    <h3>▶ GHOST PROTOCOL</h3>
+                </div>
+                <div class="stat-content">
+                    <div class="ai-message">
+                        <span class="quote-mark">"</span>
+                        <span class="aimessage">Ready to level up, Runner.</span>
+                        <span class="quote-mark">"</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="> ASK GHOST..." class="cyber-input">
+                        <div class="input-glow"></div>
+                    </div>
+                    <div class="dailytip">
+                        <span class="tip-icon"></span>
+                        <span>Tip: Log meals within 30 min for +20% XP</span>
+                    </div>
+                </div>
+                <div class="card-footer-line"></div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section id="quickAction">
+            <div class="cyber-button large logbtn">
+                <span class="btn-text">⟳ LOG WORKOUT</span>
+                <span class="btn-glow"></span>
+            </div>
+            <div class="cyber-button large mbtn">
+                <span class="btn-text">LOG MEAL</span>
+                <span class="btn-glow"></span>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section id="activity" class="futuristic-card">
+            <div class="corner-tl">┌</div>
+            <div class="corner-tr">┐</div>
+            <div class="corner-bl">└</div>
+            <div class="corner-br">┘</div>
+            <div class="activity-header">
+                <span class="activity-title">▶ RECENT TRANSMISSIONS</span>
+                <span class="activity-clear">[CLEAR]</span>
+            </div>
+            <div class="activity-list" id="activity-list">
+                <div class="activity-empty">No activity logged. Begin your run.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-item">
+            <span class="footer-label">STREAK</span>
+            <span class="footer-value streak">5 DAYS</span>
+        </div>
+        <div class="footer-divider">|</div>
+        <div class="footer-item">
+            <span class="footer-label">TOTAL XP</span>
+            <span class="footer-value totalxp">1,850</span>
+        </div>
+        <div class="footer-divider">|</div>
+        <div class="footer-item">
+            <span class="footer-label">RANK PROGRESS</span>
+            <span class="footer-value progress">45%</span>
+        </div>
+    </footer>
+
+    <script>
+        // Theme definitions
+        const themes = {
+            // BASE THEME (current settings)
+            base: {
+                '--red-deep': '#0d0202',
+                '--red-card': '#2a0a0a',
+                '--red-bright': '#c50101',
+                '--red-border': '#5e0303',
+                '--red-small': '#aa0101',
+                '--blue-label': '#50f8ea',
+                '--nav-red': '#cc0000'
+            },
+            
+            // LIGHT THEME (white and blue)
+            light: {
+                '--red-deep': '#e8f0fe',
+                '--red-card': '#ffffff',
+                '--red-bright': '#1a73e8',
+                '--red-border': '#dadce0',
+                '--red-small': '#1a73e8',
+                '--blue-label': '#0d47a1',
+                '--nav-red': '#1a73e8'
+            },
+            
+            // CYBER THEME (neon pink + cyan)
+            cyber: {
+                '--red-deep': '#0a0a1a',
+                '--red-card': '#1a0a2e',
+                '--red-bright': '#ff00ff',
+                '--red-border': '#7a00ff',
+                '--red-small': '#ff00ff',
+                '--blue-label': '#00ffff',
+                '--nav-red': '#ff00ff'
+            },
+            
+            // NEON THEME (bright green + orange)
+            neon: {
+                '--red-deep': '#0a0a0a',
+                '--red-card': '#1a1a0a',
+                '--red-bright': '#ff6600',
+                '--red-border': '#33ff00',
+                '--red-small': '#ff6600',
+                '--blue-label': '#33ff00',
+                '--nav-red': '#ff6600'
+            },
+            
+            // DARK THEME (deep purple + silver)
+            dark: {
+                '--red-deep': '#0a0a0a',
+                '--red-card': '#1a1a2e',
+                '--red-bright': '#c0c0c0',
+                '--red-border': '#4a4a6a',
+                '--red-small': '#c0c0c0',
+                '--blue-label': '#8888ff',
+                '--nav-red': '#c0c0c0'
+            }
+        };
+        
+        // Function to apply theme
+        function applyTheme(themeName) {
+            const theme = themes[themeName];
+            if (!theme) return;
+            
+            // Apply each CSS variable
+            for (const [key, value] of Object.entries(theme)) {
+                document.documentElement.style.setProperty(key, value);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('selectedTheme', themeName);
+            
+            // Update active button state
+            document.querySelectorAll('.theme-btn').forEach(btn => {
+                if (btn.getAttribute('data-theme') === themeName) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+        
+        // Load saved theme on page load
+        const savedTheme = localStorage.getItem('selectedTheme');
+        if (savedTheme && themes[savedTheme]) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme('base');
+        }
+        
+        // Add click listeners to theme buttons
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const themeName = btn.getAttribute('data-theme');
+                applyTheme(themeName);
+            });
+        });
+    </script>
+</body>
+</html>
